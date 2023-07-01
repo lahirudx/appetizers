@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522E15472A4FEE4400A9348A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E15462A4FEE4400A9348A /* User.swift */; };
 		5279B8E429F6D0F400F1B20A /* AppetizersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279B8E329F6D0F400F1B20A /* AppetizersApp.swift */; };
 		5279B8E629F6D0F400F1B20A /* AppetizersTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279B8E529F6D0F400F1B20A /* AppetizersTabView.swift */; };
 		5279B8E829F6D0F500F1B20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5279B8E729F6D0F500F1B20A /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522E15462A4FEE4400A9348A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5279B8E029F6D0F400F1B20A /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5279B8E329F6D0F400F1B20A /* AppetizersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersApp.swift; sourceTree = "<group>"; };
 		5279B8E529F6D0F400F1B20A /* AppetizersTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersTabView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				5279B8F729F6E98F00F1B20A /* Appetizer.swift */,
+				522E15462A4FEE4400A9348A /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				52E2BBA22A3591B5008FDE06 /* AppetizerListViewModel.swift in Sources */,
 				52E2BBA82A35BE6F008FDE06 /* Color+Ext.swift in Sources */,
 				5279B8F429F6D50F00F1B20A /* AccountView.swift in Sources */,
+				522E15472A4FEE4400A9348A /* User.swift in Sources */,
 				52EE32262A481C0700CC7CBE /* APButton.swift in Sources */,
 				52E2BBA62A35BDE3008FDE06 /* LoadingView.swift in Sources */,
 				5279B8E629F6D0F400F1B20A /* AppetizersTabView.swift in Sources */,
