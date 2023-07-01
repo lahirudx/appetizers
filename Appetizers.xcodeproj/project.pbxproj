@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522D650B2A506512005C7020 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D650A2A506512005C7020 /* EmptyState.swift */; };
 		522E15472A4FEE4400A9348A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E15462A4FEE4400A9348A /* User.swift */; };
 		5279B8E429F6D0F400F1B20A /* AppetizersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279B8E329F6D0F400F1B20A /* AppetizersApp.swift */; };
 		5279B8E629F6D0F400F1B20A /* AppetizersTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279B8E529F6D0F400F1B20A /* AppetizersTabView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522D650A2A506512005C7020 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		522E15462A4FEE4400A9348A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5279B8E029F6D0F400F1B20A /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5279B8E329F6D0F400F1B20A /* AppetizersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersApp.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		522D65092A5064ED005C7020 /* Empty State */ = {
+			isa = PBXGroup;
+			children = (
+				522D650A2A506512005C7020 /* EmptyState.swift */,
+			);
+			path = "Empty State";
+			sourceTree = "<group>";
+		};
 		5279B8D729F6D0F300F1B20A = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		52EE321E2A4753B800CC7CBE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				522D65092A5064ED005C7020 /* Empty State */,
 				52EE32242A481BF800CC7CBE /* Buttons */,
 				52EE32212A4753CE00CC7CBE /* UIKit Components */,
 				52EE32202A4753C800CC7CBE /* Cells */,
@@ -318,6 +329,7 @@
 				52E2BB9E2A3421D5008FDE06 /* NetworkManager.swift in Sources */,
 				52EE32142A474CFD00CC7CBE /* RemoteImage.swift in Sources */,
 				52EE322C2A48619F00CC7CBE /* String+Ext.swift in Sources */,
+				522D650B2A506512005C7020 /* EmptyState.swift in Sources */,
 				52EE32232A47556C00CC7CBE /* AppetizerDetailView.swift in Sources */,
 				5279B8E429F6D0F400F1B20A /* AppetizersApp.swift in Sources */,
 				52E2BBA42A359552008FDE06 /* Alert.swift in Sources */,
