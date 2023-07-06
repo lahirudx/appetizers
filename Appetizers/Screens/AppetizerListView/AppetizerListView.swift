@@ -17,12 +17,14 @@ struct AppetizerListView: View {
             NavigationView {
                 List(viewModel.appetizers, id: \.id) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
+//                        .listRowSeparator(.hidden)
+//                        .listRowSeparatorTint(.brandPrimary)
                         .onTapGesture {
                             viewModel.selectedAppetizer = appetizer
                             viewModel.isShowingDetail = true
                         }
                 }
-                .listStyle(.grouped)
+                .listStyle(.plain)
                 .navigationTitle("🍟 Appetizers")
                 .disabled(viewModel.isShowingDetail)
             }
@@ -55,5 +57,6 @@ struct AppetizerListView: View {
 struct AppetizerListView_Previews: PreviewProvider {
     static var previews: some View {
         AppetizerListView()
+        AppetizerListView().preferredColorScheme(.dark)
     }
 }
