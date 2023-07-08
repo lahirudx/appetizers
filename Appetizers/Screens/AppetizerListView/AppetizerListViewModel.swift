@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class AppetizerListViewModel: ObservableObject {
+@MainActor class AppetizerListViewModel: ObservableObject {
     
     @Published var appetizers: [Appetizer] = []
     @Published var alertItem: AlertItem?
@@ -15,17 +15,41 @@ class AppetizerListViewModel: ObservableObject {
     @Published var isShowingDetail = false
     @Published var selectedAppetizer: Appetizer?
     
+//    func getAppetizers() {
+//        isLoading = true
+//        NetworkManger.shared.getAppetizers { result in
+//            DispatchQueue.main.async { [self] in
+//                isLoading = false
+//                switch result {
+//                case .success(let appetizers):
+//                    self.appetizers = appetizers
+//                case .failure(let error):
+//                    switch error {
+//
+//                    case .invalidURL:
+//                        alertItem = AlertContext.invalidURL
+//                    case .invalidResponse:
+//                        alertItem = AlertContext.invalidResponse
+//                    case .invalidData:
+//                        alertItem = AlertContext.invalidData
+//                    case .unableToComplete:
+//                        alertItem = AlertContext.unableToComplete
+//                    }
+//                }
+//            }
+//        }
+//    }
     func getAppetizers() {
         isLoading = true
-        NetworkManger.shared.getAppetizers { result in
-            DispatchQueue.main.async { [self] in
+        
+        Task {
+            do {
+                appetizers = try await NetworkManger.shared.getAppetizers()
                 isLoading = false
-                switch result {
-                case .success(let appetizers):
-                    self.appetizers = appetizers
-                case .failure(let error):
-                    switch error {
-                        
+            } catch {
+                if let apError = error as? APError {
+                    switch apError {
+                    
                     case .invalidURL:
                         alertItem = AlertContext.invalidURL
                     case .invalidResponse:
@@ -35,8 +59,14 @@ class AppetizerListViewModel: ObservableObject {
                     case .unableToComplete:
                         alertItem = AlertContext.unableToComplete
                     }
+                } else {
+                    alertItem = AlertContext.invalidResponse
                 }
+                
+                isLoading = false
             }
         }
+        
+        
     }
 }
